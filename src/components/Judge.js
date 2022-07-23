@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function () {
+export default function Judge() {
   return (
     <svg
       width="16"
