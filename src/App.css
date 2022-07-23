@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
+.board-container {
+  background: url("../public/board-background.jpeg");
+  background-attachment: fixed;
+  border-radius: 30px;
+  caret-color: rgba(0, 0, 0, 0);
+}
+.board-sequence {
+  background: url("../public/board-sequence.jpeg");
+  background-attachment: fixed;
+  border-radius: 16px;
+  caret-color: rgba(0, 0, 0, 0);
+  /* margin: 10px;
+  width: 100%;
+  height: 51px;
+  margin-top: -50rem; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.board-row {
+  background: url("../public/board-col.jpeg");
+  background-attachment: fixed;
+  border-radius: 67px;
+  caret-color: rgba(0, 0, 0, 0);
+  /* width: 197px;
+  height: 43px; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.board-row-judge {
+  background-color: rgb(0, 0, 0);
+  background-image: url("../public/board-judge.jpg");
+  background-position: top left;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  border-radius: 3px;
+  caret-color: rgba(0, 0, 0, 0);
+}
+
+.board-hole {
+  border-radius: 50%;
+  background-color: #d9d9d9;
+  width: 17px;
+  height: 20px;
+}
+
+.board-judge-holes {
+  margin-top: -4px;
+}
+
+.board-row-holes {
+  margin-top: -3px;
+}
+
+.board-judge-hole {
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.53);
+  width: 4px;
+  height: 4px;
+}
+@media only screen and (min-width: 1024px) {
+}
+@media only screen and (min-width: 768px) {
+}
+/* @media only screen and (min-width: 640px) {
+  .board-container {
+    width: 100%;
+    height: 100%;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+ */
