@@ -1,3 +1,5 @@
+import { useDrag } from "react-dnd";
+
 function parseColor(color) {
   let frColor;
   let bgColor;
@@ -39,23 +41,43 @@ function parseColor(color) {
 }
 
 export default function Pin({ height, width, color }) {
+  const [{ isDragging }, drag] = useDrag(() => ({
+    type: "pin",
+    collect: (monitor) => ({
+      isDragging: !!monitor.isDragging(),
+    }),
+  }));
   return (
-    <svg
-      className="pin"
-      width={width}
-      height={height}
-      viewBox="0 0 26 33"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
+    <div
+      ref={drag}
+      style={{
+        opacity: isDragging ? 0.8 : 1,
+        cursor: "move",
+      }}
     >
-      <ellipse cx="12.5" cy="23" rx="8.5" ry="10" fill={parseColor(color)[1]} />
-      <ellipse
-        cx="13"
-        cy="13.5"
-        rx="13"
-        ry="13.5"
-        fill={parseColor(color)[0]}
-      />
-    </svg>
+      <svg
+        className="pin"
+        width={width}
+        height={height}
+        viewBox="0 0 26 33"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <ellipse
+          cx="12.5"
+          cy="23"
+          rx="8.5"
+          ry="10"
+          fill={parseColor(color)[1]}
+        />
+        <ellipse
+          cx="13"
+          cy="13.5"
+          rx="13"
+          ry="13.5"
+          fill={parseColor(color)[0]}
+        />
+      </svg>
+    </div>
   );
 }
