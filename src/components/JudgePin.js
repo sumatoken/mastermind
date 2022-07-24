@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function JudgePin() {
   return (
     <svg
@@ -12,10 +10,10 @@ export default function JudgePin() {
     >
       <path
         d="M8 24V14.5M8 14.5H5V9H8H11V14.5H8Z"
-        stroke="#FF0000"
+        stroke="#D82626"
         strokeWidth="4"
       />
-      <ellipse cx="8" cy="9" rx="8" ry="9" fill="#D82626" />
+      <ellipse cx="8" cy="9" rx="8" ry="9" fill="#FF0000" />
     </svg>
   );
 }
