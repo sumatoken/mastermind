@@ -1,10 +1,11 @@
 import React from "react";
 
-export default function Pin() {
+export default function Pin({ height, width }) {
   return (
     <svg
-      width="26"
-      height="33"
+      className="pin"
+      width={width}
+      height={height}
       viewBox="0 0 26 33"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
